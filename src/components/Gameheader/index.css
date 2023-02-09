@@ -1,0 +1,18 @@
+.gameheader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameheader button{
+  width: 5rem;
+  height: 3rem;
+  background-color: #776D64;
+  color: white;
+}
+
+.gameheader .title{
+  font-size: 5rem;
+  color: #776D64;
+  font-weight: bold;
+}

@@ -1,0 +1,11 @@
+.score{
+  display: flex;
+  flex-direction: column;
+  background-color: #BBADA0;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+.score .score-title{
+  color: #EFE3D5;
+}
