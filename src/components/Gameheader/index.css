@@ -9,6 +9,7 @@
   height: 3rem;
   background-color: #776D64;
   color: white;
+  border-radius: 8px;
 }
 
 .gameheader .title{
