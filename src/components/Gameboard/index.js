@@ -7,14 +7,14 @@ import './index.css'
 class Gameboard extends Component {
     componentDidMount() {
         document.addEventListener('keydown', this.handleOnKeydown)
-        // 从localStorage中读取最高分
+        // get the bestcore from localStorage
         const bestScore = parseInt(localStorage.getItem('bestScore') || '0')
-        // 更新最高分
+        // update the best score
         this.props.updateBestScore(bestScore)
 
-        // 随机产生一个位置的2或4
+        // radom get a number 2 or 4 in a blank row
         const newRows = this.randomNumber(this.props.rows)
-        // 然后更新rows
+        // update rows
         this.props.updateRows(newRows)
     }
 
@@ -22,7 +22,7 @@ class Gameboard extends Component {
         document.removeEventListener('keydown', this.handleOnKeydown)
     }
 
-    // 随机在一个空的区域（value=0）产生2或4
+    // radom get a number 2 or 2 in a blank area （value=0）
     randomNumber = (rows)=>{
         let row, col, value
         const newRows = [...rows]
