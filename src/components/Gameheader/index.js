@@ -24,7 +24,7 @@ class Gameheader extends Component {
                 <span className="title">2048</span>
                 <Score title="SCORE" number={`${score}`} />
                 <Score title="BEST" number={`${bestScore}`} />
-                <button onClick={this.resetGame}>NEW GAME</button>
+                <button onClick={this.resetGame} hover>NEW GAME</button>
             </div>
         )
     }
