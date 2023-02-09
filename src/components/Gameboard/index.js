@@ -42,7 +42,7 @@ class Gameboard extends Component {
         return newRows
     }
 
-    // 判断棋盘是否已满
+    // judge if gameboard is full
     gameboardIsFull = ()=>{
         const {rows} = this.props
 
@@ -60,14 +60,14 @@ class Gameboard extends Component {
         let win = false
         let over = true
         const {rows} = this.props
-        // 判断是否出现了1024
+        // judge if there is a 1024
         for(let i=0;i<4;i++){
             if(rows[i].some(col=>col>=1024)){
                 win = true
                 break
             }
         }
-        // 竖直方向判断是否可以走
+        // if there is any blank vertical 
         vertical:
         for(let i=0;i<4;i++){
             for(let j=0;j<3;j++){
@@ -77,7 +77,7 @@ class Gameboard extends Component {
                 }
             }
         }
-        // 判断水平方向是否可以走
+        // if there is any blank horizantial 
         level:
         for(let i=0;i<4;i++){
             for(let j=0;j<3;j++){
@@ -87,7 +87,7 @@ class Gameboard extends Component {
                 }
             }
         }
-        // 看棋盘是否已满
+        // all gameboard is full?
         over = this.gameboardIsFull() && over
 
         if(win){
@@ -135,7 +135,7 @@ class Gameboard extends Component {
                         }   
                     }
                 }
-                // 然后更新rows
+                // update rows
                 this.props.updateRows(this.randomNumber(newRows))
                 break
             case 38:// up
