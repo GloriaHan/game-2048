@@ -95,7 +95,7 @@ class Gameboard extends Component {
     if (win) {
       setTimeout(() => {
         alert(
-          `You win! Your score is ${this.props.score}. Please replay or quit`
+          `Congrats! You win! Your score is ${this.props.score}.`
         )
       }, 0)
       if (this.props.score > this.props.bestScore) {
@@ -109,7 +109,7 @@ class Gameboard extends Component {
     } else if (over) {
       setTimeout(() => {
         alert(
-          `You lost! Your score is ${this.props.score}. Please replay or quit`
+          `You lost! Your score is ${this.props.score}. Do you want to try again?`
         )
       }, 0)
       if (this.props.score > this.props.bestScore) {
